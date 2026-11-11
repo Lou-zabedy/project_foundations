@@ -1,0 +1,324 @@
+
+/* ==========================================
+   PES 2013 INSPIRED FOOTBALL PORTFOLIO
+   ========================================== */
+
+:root {
+    --pes-blue: #123c70;
+    --pes-light-blue: #2876b9;
+    --pes-gold: #e5b94c;
+    --pes-dark: #101820;
+    --pes-card: #182a3d;
+    --pes-text: #e8edf2;
+    --pes-muted: #aab7c4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    line-height: 1.6;
+    color: var(--pes-text);
+    background:
+        radial-gradient(ellipse at top, #1b4163 0%, transparent 55%),
+        linear-gradient(135deg, #08121e, #101e2b, #0b1520);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    border: 1px solid rgba(229, 185, 76, 0.5);
+    border-radius: 12px;
+    background: linear-gradient(135deg, #123c70, #101820);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "FOOTBALL • DATA • ANALYTICS";
+    display: block;
+    margin-top: 15px;
+    color: var(--pes-gold);
+    letter-spacing: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8em;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    color: var(--pes-gold);
+    font-size: 1.7em;
+    letter-spacing: 2px;
+}
+
+h3 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: var(--pes-gold);
+}
+
+p {
+    font-size: 1.1em;
+    color: var(--pes-muted);
+}
+
+/* SKILLS AND PROJECT SECTIONS */
+
+.skills,
+.projects {
+    margin: 25px 0;
+    background: rgba(24, 42, 61, 0.95);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* SKILLS */
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.skills li {
+    background: linear-gradient(135deg, #174d80, #246ba3);
+    color: white;
+    padding: 9px 20px;
+    border: 1px solid rgba(229, 185, 76, 0.35);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.skills li:hover {
+    transform: translateY(-4px);
+    background: var(--pes-gold);
+    color: var(--pes-dark);
+    box-shadow: 0 5px 15px rgba(229, 185, 76, 0.3);
+}
+
+/* PROJECT GRID */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(145deg, #203c56, #142538);
+    border: 1px solid rgba(229, 185, 76, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: var(--pes-gold);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* PROJECT IMAGES */
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid var(--pes-blue);
+    border-radius: 6px;
+    transition: transform 0.4s ease;
+}
+
+.project:hover img {
+    transform: scale(1.04);
+}
+
+.project .project-image {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.project .project-image:hover {
+    filter: drop-shadow(0 5px 12px rgba(40, 118, 185, 0.5));
+}
+
+.project h3 {
+    margin: 0;
+    color: var(--pes-gold);
+    font-size: 1.3em;
+}
+
+.project p {
+    color: var(--pes-muted);
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+/* PROJECT BUTTON */
+
+.project .project-link {
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #174d80, #2876b9);
+    padding: 10px 25px;
+    border: 1px solid var(--pes-gold);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.project .project-link:hover {
+    background: var(--pes-gold);
+    color: var(--pes-dark);
+    transform: scale(1.05);
+}
+
+/* LINKS */
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--pes-gold);
+}
+
+/* ATTENTION TEXT */
+
+#attn {
+    font-size: 1.4em;
+    margin: 0;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    color: var(--pes-gold);
+}
+
+/* SOCIAL MEDIA */
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.socials li {
+    display: inline;
+}
+
+.socials a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.socials a img {
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
+}
+
+.socials a:hover {
+    filter: drop-shadow(0 5px 12px var(--pes-light-blue));
+    transform: scale(1.15);
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project {
+        padding: 20px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    body {
+        padding: 12px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.9em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    #attn {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .project h3 {
+        font-size: 1.2em;
+    }
+
+    .project .project-link {
+        font-size: 1em;
+        padding: 9px 20px;
+    }
+
+    .skills li {
+        font-size: 0.95em;
+    }
+
+    .socials a img {
+        width: 30px;
+        height: 30px;
+    }
+}
